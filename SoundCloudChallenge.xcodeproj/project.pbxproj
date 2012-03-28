@@ -1,0 +1,263 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C989349615234AB0005FFA92 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C989349515234AB0005FFA92 /* UIKit.framework */; };
+		C989349815234AB0005FFA92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C989349715234AB0005FFA92 /* Foundation.framework */; };
+		C989349A15234AB0005FFA92 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C989349915234AB0005FFA92 /* CoreGraphics.framework */; };
+		C98934A015234AB0005FFA92 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C989349E15234AB0005FFA92 /* InfoPlist.strings */; };
+		C98934A215234AB0005FFA92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C98934A115234AB0005FFA92 /* main.m */; };
+		C98934A615234AB0005FFA92 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C98934A515234AB0005FFA92 /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C989349115234AB0005FFA92 /* SoundCloudChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundCloudChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C989349515234AB0005FFA92 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C989349715234AB0005FFA92 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C989349915234AB0005FFA92 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C989349D15234AB0005FFA92 /* SoundCloudChallenge-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SoundCloudChallenge-Info.plist"; sourceTree = "<group>"; };
+		C989349F15234AB0005FFA92 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C98934A115234AB0005FFA92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C98934A315234AB0005FFA92 /* SoundCloudChallenge-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SoundCloudChallenge-Prefix.pch"; sourceTree = "<group>"; };
+		C98934A415234AB0005FFA92 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C98934A515234AB0005FFA92 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C989348E15234AB0005FFA92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C989349615234AB0005FFA92 /* UIKit.framework in Frameworks */,
+				C989349815234AB0005FFA92 /* Foundation.framework in Frameworks */,
+				C989349A15234AB0005FFA92 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C989348615234AAF005FFA92 = {
+			isa = PBXGroup;
+			children = (
+				C989349B15234AB0005FFA92 /* SoundCloudChallenge */,
+				C989349415234AB0005FFA92 /* Frameworks */,
+				C989349215234AB0005FFA92 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C989349215234AB0005FFA92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C989349115234AB0005FFA92 /* SoundCloudChallenge.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C989349415234AB0005FFA92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C989349515234AB0005FFA92 /* UIKit.framework */,
+				C989349715234AB0005FFA92 /* Foundation.framework */,
+				C989349915234AB0005FFA92 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C989349B15234AB0005FFA92 /* SoundCloudChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				C98934A415234AB0005FFA92 /* AppDelegate.h */,
+				C98934A515234AB0005FFA92 /* AppDelegate.m */,
+				C989349C15234AB0005FFA92 /* Supporting Files */,
+			);
+			path = SoundCloudChallenge;
+			sourceTree = "<group>";
+		};
+		C989349C15234AB0005FFA92 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C989349D15234AB0005FFA92 /* SoundCloudChallenge-Info.plist */,
+				C989349E15234AB0005FFA92 /* InfoPlist.strings */,
+				C98934A115234AB0005FFA92 /* main.m */,
+				C98934A315234AB0005FFA92 /* SoundCloudChallenge-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C989349015234AB0005FFA92 /* SoundCloudChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C98934A915234AB0005FFA92 /* Build configuration list for PBXNativeTarget "SoundCloudChallenge" */;
+			buildPhases = (
+				C989348D15234AB0005FFA92 /* Sources */,
+				C989348E15234AB0005FFA92 /* Frameworks */,
+				C989348F15234AB0005FFA92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoundCloudChallenge;
+			productName = SoundCloudChallenge;
+			productReference = C989349115234AB0005FFA92 /* SoundCloudChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C989348815234AB0005FFA92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = C989348B15234AB0005FFA92 /* Build configuration list for PBXProject "SoundCloudChallenge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C989348615234AAF005FFA92;
+			productRefGroup = C989349215234AB0005FFA92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C989349015234AB0005FFA92 /* SoundCloudChallenge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C989348F15234AB0005FFA92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C98934A015234AB0005FFA92 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C989348D15234AB0005FFA92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C98934A215234AB0005FFA92 /* main.m in Sources */,
+				C98934A615234AB0005FFA92 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C989349E15234AB0005FFA92 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C989349F15234AB0005FFA92 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C98934A715234AB0005FFA92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C98934A815234AB0005FFA92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C98934AA15234AB0005FFA92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SoundCloudChallenge/SoundCloudChallenge-Prefix.pch";
+				INFOPLIST_FILE = "SoundCloudChallenge/SoundCloudChallenge-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C98934AB15234AB0005FFA92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SoundCloudChallenge/SoundCloudChallenge-Prefix.pch";
+				INFOPLIST_FILE = "SoundCloudChallenge/SoundCloudChallenge-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C989348B15234AB0005FFA92 /* Build configuration list for PBXProject "SoundCloudChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C98934A715234AB0005FFA92 /* Debug */,
+				C98934A815234AB0005FFA92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C98934A915234AB0005FFA92 /* Build configuration list for PBXNativeTarget "SoundCloudChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C98934AA15234AB0005FFA92 /* Debug */,
+				C98934AB15234AB0005FFA92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C989348815234AB0005FFA92 /* Project object */;
+}
