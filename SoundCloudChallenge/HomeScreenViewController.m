@@ -8,11 +8,24 @@
 
 #import "HomeScreenViewController.h"
 
+#import "SCUI.h"
+#import "SCLoginViewController.h"
+#import "JSONKit.h"
+
 @interface HomeScreenViewController ()
+
+- (void)scLogin;
+- (void)scGetUserDetails;
+- (void)loadProfilePicWithURL:(NSURL *)picUrl;
+- (void)displayProfilePic:(UIImage *)image;
 
 @end
 
 @implementation HomeScreenViewController
+
+@synthesize ivProfilePic=_ivProfilePic,
+            lblUserName=_lblUserName,
+            tblIncomingTracks=_tblIncomingTracks;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +40,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self scLogin];
 }
 
 - (void)viewDidUnload
@@ -39,6 +53,65 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark - Private Methods
+
+- (void)scLogin
+{
+    [SCSoundCloud requestAccessWithPreparedAuthorizationURLHandler:^(NSURL *preparedURL){
+        
+        SCLoginViewController *loginViewController;
+        loginViewController = [SCLoginViewController loginViewControllerWithPreparedURL:preparedURL
+                                                                      completionHandler:^(NSError *error){
+                                                                          
+                                                                          if (SC_CANCELED(error)) {
+                                                                              NSLog(@"Canceled!");
+                                                                          } else if (error) {
+                                                                              NSLog(@"Ooops, something went wrong: %@", [error localizedDescription]);
+                                                                          } else {
+                                                                              NSLog(@"Done!");
+                                                                              NSLog(@"Account id: %@", [SCSoundCloud account].identifier);
+                                                                              [self scGetUserDetails];
+                                                                          }
+                                                                      }];
+        
+        [self presentModalViewController:loginViewController
+                                animated:YES];
+        
+    }];
+}
+
+- (void)scGetUserDetails
+{
+    SCAccount *account = [SCSoundCloud account];
+    
+    id obj = [SCRequest performMethod:SCRequestMethodGET
+                           onResource:[NSURL URLWithString:@"https://api.soundcloud.com/me.json"]
+                      usingParameters:nil
+                          withAccount:account
+               sendingProgressHandler:nil
+                      responseHandler:^(NSURLResponse *response, NSData *data, NSError *error){
+                          // Handle the response
+                          if (error) {
+                              NSLog(@"Ooops, something went wrong: %@", [error localizedDescription]);
+                          } else {
+                              // Check the statuscode and parse the data
+                              NSString *strData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                              NSDictionary *dictData = [strData objectFromJSONString];
+                              self.lblUserName.text = [dictData objectForKey:@"username"];
+                          }
+                      }];
+}
+
+- (void)loadProfilePicWithURL:(NSURL *)picUrl
+{
+    
+}
+
+- (void)displayProfilePic:(UIImage *)image
+{
+
 }
 
 @end

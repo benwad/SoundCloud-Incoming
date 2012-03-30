@@ -8,15 +8,33 @@
 
 #import "AppDelegate.h"
 
+#import "HomeScreenViewController.h"
+#import "SCUI.h"
+
 @implementation AppDelegate
 
 @synthesize window = _window;
+
+@synthesize vcHomeScreen;
+
++ (void)initialize
+{
+    [SCSoundCloud  setClientID:@"ac41e28ec1a2e2c56ce3618e32864f7d"
+                        secret:@"423bface8c0ef39bf9894c77a62b514c"
+                   redirectURL:[NSURL URLWithString:@"scdemo://oauth2"]];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+//    self.window.backgroundColor = [UIColor whiteColor];
+    
+    self.vcHomeScreen = [[HomeScreenViewController alloc] initWithNibName:@"HomeScreenViewController" bundle:nil];
+    UINavigationController *ncHomeScreen = [[UINavigationController alloc] initWithRootViewController:self.vcHomeScreen];
+    
+    self.window.rootViewController = ncHomeScreen;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

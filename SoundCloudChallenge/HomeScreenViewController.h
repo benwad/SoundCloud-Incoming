@@ -9,5 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface HomeScreenViewController : UIViewController
+{
+    UIImageView *_ivProfilePic;
+    UILabel *_lblUserName;
+    UITableView *_tblIncomingTracks;
+}
+
+@property (nonatomic, retain) IBOutlet UIImageView *ivProfilePic;
+@property (nonatomic, retain) IBOutlet UILabel *lblUserName;
+@property (nonatomic, retain) IBOutlet UITableView *tblIncomingTracks;
 
 @end
