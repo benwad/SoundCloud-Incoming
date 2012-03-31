@@ -32,6 +32,7 @@
     
     self.vcHomeScreen = [[HomeScreenViewController alloc] initWithNibName:@"HomeScreenViewController" bundle:nil];
     UINavigationController *ncHomeScreen = [[UINavigationController alloc] initWithRootViewController:self.vcHomeScreen];
+    ncHomeScreen.navigationBar.tintColor = [UIColor orangeColor];
     
     self.window.rootViewController = ncHomeScreen;
     
