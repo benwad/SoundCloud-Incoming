@@ -27,6 +27,7 @@
 - (void)getTrackDataFromArray:(NSArray *)array;
 - (void)presentTable;
 - (void)presentNoTracksLabel;
+- (void)presentNotLoggedInView;
 
 @end
 
@@ -40,7 +41,8 @@
             incomingTracks=_incomingTracks,
             aiLoadingTracks=_aiLoadingTracks,
             urlGetMoreIncomingTracks=_urlGetMoreIncomingTracks,
-            trackOffset=_trackOffset;
+            trackOffset=_trackOffset,
+            notLoggedInView=_notLoggedInView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -55,6 +57,11 @@
 {
     [super viewDidLoad];
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Login"
+                                                                              style:UIBarButtonItemStylePlain
+                                                                             target:self
+                                                                             action:@selector(scLogin)];
+    
     self.tblIncomingTracks.delegate = self;
     self.tblIncomingTracks.dataSource = self;
     
@@ -64,6 +71,20 @@
     self.trackOffset = 0;
     self.incomingTracks = [NSMutableArray arrayWithCapacity:20];
     
+    self.notLoggedInView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 460.0)];
+    self.notLoggedInView.backgroundColor = [UIColor orangeColor];
+    
+    UILabel *lblNotLoggedIn = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 160.0, 320.0, 80.0)];
+    lblNotLoggedIn.text = @"You are not logged in.";
+    lblNotLoggedIn.textAlignment = UITextAlignmentCenter;
+    lblNotLoggedIn.backgroundColor = [UIColor clearColor];
+    
+    
+    [self.notLoggedInView addSubview:lblNotLoggedIn];
+    self.notLoggedInView.hidden = YES;
+    
+    [self.view addSubview:self.notLoggedInView];
+    
     [self scLogin];
 }
 
@@ -71,7 +92,19 @@
 {
     [super viewWillAppear:animated];
     
+//    if ([SCSoundCloud account] == nil)
+//        [self presentNotLoggedInView];
+    
     [self.tblIncomingTracks deselectRowAtIndexPath:self.tblIncomingTracks.indexPathForSelectedRow animated:YES];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    if ([SCSoundCloud account] == nil)
+        [self presentNotLoggedInView];
+    else {
+        self.notLoggedInView.hidden = YES;
+    }
 }
 
 - (void)viewDidUnload
@@ -211,6 +244,7 @@
                                                                               NSLog(@"Done!");
                                                                               NSLog(@"Account id: %@", [SCSoundCloud account].identifier);
                                                                               self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(scLogout)                                                                                       ];
+                                                                              [self.incomingTracks removeAllObjects];
                                                                               [self scGetUserDetails];
                                                                           }
                                                                       }];
@@ -369,6 +403,22 @@
     [UIView setAnimationDuration:0.5];
     self.lblNoTracks.alpha = 1.0;
     [UIView commitAnimations];
+}
+
+- (void)presentNotLoggedInView
+{
+    self.notLoggedInView.hidden = YES;
+    self.notLoggedInView.alpha = 0.0;
+    self.notLoggedInView.hidden = NO;
+    [UIView beginAnimations:@"FadeInNotLoggedInView" context:nil];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationDuration:0.5];
+    self.notLoggedInView.alpha = 1.0;
+    [UIView commitAnimations];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Login"
+                                                                              style:UIBarButtonItemStylePlain
+                                                                             target:self
+                                                                             action:@selector(scLogin)];
 }
 
 - (void)getTrackDataFromArray:(NSArray *)array

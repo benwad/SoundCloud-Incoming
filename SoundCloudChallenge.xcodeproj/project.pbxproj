@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0665783152A298A00B7EC07 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C0665777152A298A00B7EC07 /* EGOCache.m */; };
+		C0665784152A298A00B7EC07 /* EGOImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C066577A152A298A00B7EC07 /* EGOImageButton.m */; };
+		C0665785152A298A00B7EC07 /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = C066577D152A298A00B7EC07 /* EGOImageLoadConnection.m */; };
+		C0665786152A298A00B7EC07 /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = C066577F152A298A00B7EC07 /* EGOImageLoader.m */; };
+		C0665787152A298A00B7EC07 /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0665782152A298A00B7EC07 /* EGOImageView.m */; };
 		C07EA1681525A4F600F0967D /* libJSONKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C07EA14E1525A4BA00F0967D /* libJSONKit.a */; };
 		C07EA1691525A4F600F0967D /* libOAuth2Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C07EA15C1525A4C200F0967D /* libOAuth2Client.a */; };
 		C07EA16A1525A4F600F0967D /* libOHAttributedLabel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C07EA1651525A4C900F0967D /* libOHAttributedLabel.a */; };
@@ -24,13 +29,6 @@
 		C07EA1851525A63700F0967D /* SoundCloud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C07EA1841525A63700F0967D /* SoundCloud.bundle */; };
 		C07EA1881525B72300F0967D /* IncomingTrackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C07EA1871525B72300F0967D /* IncomingTrackCell.m */; };
 		C07EA18A1525B80800F0967D /* IncomingTrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C07EA1891525B80700F0967D /* IncomingTrackCell.xib */; };
-		C07EA1A01525D15800F0967D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C07EA1901525D15800F0967D /* .gitignore */; };
-		C07EA1A11525D15800F0967D /* .gitmodules in Resources */ = {isa = PBXBuildFile; fileRef = C07EA1911525D15800F0967D /* .gitmodules */; };
-		C07EA1A21525D15800F0967D /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C07EA1941525D15800F0967D /* EGOCache.m */; };
-		C07EA1A31525D15800F0967D /* EGOImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C07EA1971525D15800F0967D /* EGOImageButton.m */; };
-		C07EA1A41525D15800F0967D /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = C07EA19A1525D15800F0967D /* EGOImageLoadConnection.m */; };
-		C07EA1A51525D15800F0967D /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = C07EA19C1525D15800F0967D /* EGOImageLoader.m */; };
-		C07EA1A61525D15800F0967D /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C07EA19F1525D15800F0967D /* EGOImageView.m */; };
 		C989349615234AB0005FFA92 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C989349515234AB0005FFA92 /* UIKit.framework */; };
 		C989349815234AB0005FFA92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C989349715234AB0005FFA92 /* Foundation.framework */; };
 		C989349A15234AB0005FFA92 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C989349915234AB0005FFA92 /* CoreGraphics.framework */; };
@@ -113,6 +111,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C0665776152A298A00B7EC07 /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
+		C0665777152A298A00B7EC07 /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
+		C0665779152A298A00B7EC07 /* EGOImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageButton.h; sourceTree = "<group>"; };
+		C066577A152A298A00B7EC07 /* EGOImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageButton.m; sourceTree = "<group>"; };
+		C066577C152A298A00B7EC07 /* EGOImageLoadConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageLoadConnection.h; sourceTree = "<group>"; };
+		C066577D152A298A00B7EC07 /* EGOImageLoadConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageLoadConnection.m; sourceTree = "<group>"; };
+		C066577E152A298A00B7EC07 /* EGOImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageLoader.h; sourceTree = "<group>"; };
+		C066577F152A298A00B7EC07 /* EGOImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageLoader.m; sourceTree = "<group>"; };
+		C0665781152A298A00B7EC07 /* EGOImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageView.h; sourceTree = "<group>"; };
+		C0665782152A298A00B7EC07 /* EGOImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageView.m; sourceTree = "<group>"; };
 		C07EA12D1525A4A900F0967D /* SoundCloudAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SoundCloudAPI.xcodeproj; path = CocoaSoundCloudAPI/SoundCloudAPI.xcodeproj; sourceTree = "<group>"; };
 		C07EA1391525A4B100F0967D /* SoundCloudUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SoundCloudUI.xcodeproj; path = CocoaSoundCloudUI/SoundCloudUI.xcodeproj; sourceTree = "<group>"; };
 		C07EA1451525A4BA00F0967D /* JSONKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSONKit.xcodeproj; path = JSONKit/JSONKit.xcodeproj; sourceTree = "<group>"; };
@@ -133,18 +141,6 @@
 		C07EA1861525B72300F0967D /* IncomingTrackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncomingTrackCell.h; sourceTree = "<group>"; };
 		C07EA1871525B72300F0967D /* IncomingTrackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncomingTrackCell.m; sourceTree = "<group>"; };
 		C07EA1891525B80700F0967D /* IncomingTrackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IncomingTrackCell.xib; sourceTree = "<group>"; };
-		C07EA1901525D15800F0967D /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		C07EA1911525D15800F0967D /* .gitmodules */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitmodules; sourceTree = "<group>"; };
-		C07EA1931525D15800F0967D /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
-		C07EA1941525D15800F0967D /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
-		C07EA1961525D15800F0967D /* EGOImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageButton.h; sourceTree = "<group>"; };
-		C07EA1971525D15800F0967D /* EGOImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageButton.m; sourceTree = "<group>"; };
-		C07EA1991525D15800F0967D /* EGOImageLoadConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageLoadConnection.h; sourceTree = "<group>"; };
-		C07EA19A1525D15800F0967D /* EGOImageLoadConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageLoadConnection.m; sourceTree = "<group>"; };
-		C07EA19B1525D15800F0967D /* EGOImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageLoader.h; sourceTree = "<group>"; };
-		C07EA19C1525D15800F0967D /* EGOImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageLoader.m; sourceTree = "<group>"; };
-		C07EA19E1525D15800F0967D /* EGOImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageView.h; sourceTree = "<group>"; };
-		C07EA19F1525D15800F0967D /* EGOImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageView.m; sourceTree = "<group>"; };
 		C989349115234AB0005FFA92 /* SoundCloudChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundCloudChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C989349515234AB0005FFA92 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C989349715234AB0005FFA92 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -182,6 +178,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C0665774152A298A00B7EC07 /* EGOImageLoading */ = {
+			isa = PBXGroup;
+			children = (
+				C0665775152A298A00B7EC07 /* EGOCache */,
+				C0665778152A298A00B7EC07 /* EGOImageButton */,
+				C066577B152A298A00B7EC07 /* EGOImageLoader */,
+				C0665780152A298A00B7EC07 /* EGOImageView */,
+			);
+			path = EGOImageLoading;
+			sourceTree = "<group>";
+		};
+		C0665775152A298A00B7EC07 /* EGOCache */ = {
+			isa = PBXGroup;
+			children = (
+				C0665776152A298A00B7EC07 /* EGOCache.h */,
+				C0665777152A298A00B7EC07 /* EGOCache.m */,
+			);
+			path = EGOCache;
+			sourceTree = "<group>";
+		};
+		C0665778152A298A00B7EC07 /* EGOImageButton */ = {
+			isa = PBXGroup;
+			children = (
+				C0665779152A298A00B7EC07 /* EGOImageButton.h */,
+				C066577A152A298A00B7EC07 /* EGOImageButton.m */,
+			);
+			path = EGOImageButton;
+			sourceTree = "<group>";
+		};
+		C066577B152A298A00B7EC07 /* EGOImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				C066577C152A298A00B7EC07 /* EGOImageLoadConnection.h */,
+				C066577D152A298A00B7EC07 /* EGOImageLoadConnection.m */,
+				C066577E152A298A00B7EC07 /* EGOImageLoader.h */,
+				C066577F152A298A00B7EC07 /* EGOImageLoader.m */,
+			);
+			path = EGOImageLoader;
+			sourceTree = "<group>";
+		};
+		C0665780152A298A00B7EC07 /* EGOImageView */ = {
+			isa = PBXGroup;
+			children = (
+				C0665781152A298A00B7EC07 /* EGOImageView.h */,
+				C0665782152A298A00B7EC07 /* EGOImageView.m */,
+			);
+			path = EGOImageView;
+			sourceTree = "<group>";
+		};
 		C07EA12E1525A4A900F0967D /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,7 +274,6 @@
 		C07EA1791525A53300F0967D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C07EA18F1525D15700F0967D /* EGOImageLoading */,
 				C07EA18B1525C9D900F0967D /* Custom Views */,
 				C98934A415234AB0005FFA92 /* AppDelegate.h */,
 				C98934A515234AB0005FFA92 /* AppDelegate.m */,
@@ -266,57 +310,6 @@
 				C07EA1891525B80700F0967D /* IncomingTrackCell.xib */,
 			);
 			name = "Custom Views";
-			sourceTree = "<group>";
-		};
-		C07EA18F1525D15700F0967D /* EGOImageLoading */ = {
-			isa = PBXGroup;
-			children = (
-				C07EA1901525D15800F0967D /* .gitignore */,
-				C07EA1911525D15800F0967D /* .gitmodules */,
-				C07EA1921525D15800F0967D /* EGOCache */,
-				C07EA1951525D15800F0967D /* EGOImageButton */,
-				C07EA1981525D15800F0967D /* EGOImageLoader */,
-				C07EA19D1525D15800F0967D /* EGOImageView */,
-			);
-			path = EGOImageLoading;
-			sourceTree = SOURCE_ROOT;
-		};
-		C07EA1921525D15800F0967D /* EGOCache */ = {
-			isa = PBXGroup;
-			children = (
-				C07EA1931525D15800F0967D /* EGOCache.h */,
-				C07EA1941525D15800F0967D /* EGOCache.m */,
-			);
-			path = EGOCache;
-			sourceTree = "<group>";
-		};
-		C07EA1951525D15800F0967D /* EGOImageButton */ = {
-			isa = PBXGroup;
-			children = (
-				C07EA1961525D15800F0967D /* EGOImageButton.h */,
-				C07EA1971525D15800F0967D /* EGOImageButton.m */,
-			);
-			path = EGOImageButton;
-			sourceTree = "<group>";
-		};
-		C07EA1981525D15800F0967D /* EGOImageLoader */ = {
-			isa = PBXGroup;
-			children = (
-				C07EA1991525D15800F0967D /* EGOImageLoadConnection.h */,
-				C07EA19A1525D15800F0967D /* EGOImageLoadConnection.m */,
-				C07EA19B1525D15800F0967D /* EGOImageLoader.h */,
-				C07EA19C1525D15800F0967D /* EGOImageLoader.m */,
-			);
-			path = EGOImageLoader;
-			sourceTree = "<group>";
-		};
-		C07EA19D1525D15800F0967D /* EGOImageView */ = {
-			isa = PBXGroup;
-			children = (
-				C07EA19E1525D15800F0967D /* EGOImageView.h */,
-				C07EA19F1525D15800F0967D /* EGOImageView.m */,
-			);
-			path = EGOImageView;
 			sourceTree = "<group>";
 		};
 		C989348615234AAF005FFA92 = {
@@ -360,6 +353,7 @@
 		C989349B15234AB0005FFA92 /* SoundCloudChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				C0665774152A298A00B7EC07 /* EGOImageLoading */,
 				C07EA1831525A62300F0967D /* Resources */,
 				C07EA1791525A53300F0967D /* Classes */,
 				C989349C15234AB0005FFA92 /* Supporting Files */,
@@ -521,8 +515,6 @@
 				C07EA1811525A57000F0967D /* HomeScreenViewController.xib in Resources */,
 				C07EA1851525A63700F0967D /* SoundCloud.bundle in Resources */,
 				C07EA18A1525B80800F0967D /* IncomingTrackCell.xib in Resources */,
-				C07EA1A01525D15800F0967D /* .gitignore in Resources */,
-				C07EA1A11525D15800F0967D /* .gitmodules in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,11 +530,11 @@
 				C07EA1801525A57000F0967D /* HomeScreenViewController.m in Sources */,
 				C07EA1821525A57000F0967D /* ViewControllerBase.m in Sources */,
 				C07EA1881525B72300F0967D /* IncomingTrackCell.m in Sources */,
-				C07EA1A21525D15800F0967D /* EGOCache.m in Sources */,
-				C07EA1A31525D15800F0967D /* EGOImageButton.m in Sources */,
-				C07EA1A41525D15800F0967D /* EGOImageLoadConnection.m in Sources */,
-				C07EA1A51525D15800F0967D /* EGOImageLoader.m in Sources */,
-				C07EA1A61525D15800F0967D /* EGOImageView.m in Sources */,
+				C0665783152A298A00B7EC07 /* EGOCache.m in Sources */,
+				C0665784152A298A00B7EC07 /* EGOImageButton.m in Sources */,
+				C0665785152A298A00B7EC07 /* EGOImageLoadConnection.m in Sources */,
+				C0665786152A298A00B7EC07 /* EGOImageLoader.m in Sources */,
+				C0665787152A298A00B7EC07 /* EGOImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,3 @@
 [submodule "CocoaSoundCloudUI"]
 	path = CocoaSoundCloudUI
 	url = git://github.com/soundcloud/CocoaSoundCloudUI.git
-[submodule "EGOImageLoading"]
-	path = EGOImageLoading
-	url = https://github.com/enormego/EGOImageLoading.git

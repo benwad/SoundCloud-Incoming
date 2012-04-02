@@ -8,6 +8,8 @@
 
 #import "IncomingTrackCell.h"
 
+#import "EGOImageView.h"
+
 @implementation IncomingTrackCell
 
 @synthesize lblTrackName=_lblTrackName,

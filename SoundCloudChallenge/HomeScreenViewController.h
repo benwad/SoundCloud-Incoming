@@ -19,6 +19,8 @@
     UITableView *_tblIncomingTracks;
     UIActivityIndicatorView *_aiLoadingTracks;
     
+    UIView *_notLoggedInView;
+    
     NSMutableArray *_incomingTracks;
     NSURL *_urlGetMoreIncomingTracks;
     NSInteger _trackOffset;
@@ -30,6 +32,8 @@
 @property (nonatomic, retain) IBOutlet UILabel *lblNoTracks;
 @property (nonatomic, retain) IBOutlet UITableView *tblIncomingTracks;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *aiLoadingTracks;
+
+@property (nonatomic, retain) UIView *notLoggedInView;
 
 @property (nonatomic, retain) NSMutableArray *incomingTracks;
 @property (nonatomic, retain) NSURL *urlGetMoreIncomingTracks;
