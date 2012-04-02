@@ -200,9 +200,6 @@
 {
     if (indexPath.row < [self.incomingTracks count])
     {
-        // @todo: bring up the track in SoundCloud app or browser
-        NSLog(@"Track data: %@", [[self.incomingTracks objectAtIndex:indexPath.row] description]);
-        
         NSURL *trackURL = [NSURL URLWithString:[[self.incomingTracks objectAtIndex:indexPath.row] objectForKey:@"permalink_url"]];
         [[UIApplication sharedApplication] openURL:trackURL];
         
@@ -237,12 +234,15 @@
                                                                       completionHandler:^(NSError *error){
                                                                           
                                                                           if (SC_CANCELED(error)) {
-                                                                              NSLog(@"Canceled!");
+                                                                              // nothing
                                                                           } else if (error) {
-                                                                              NSLog(@"Ooops, something went wrong: %@", [error localizedDescription]);
+                                                                              UIAlertView *avLoginError = [[UIAlertView alloc] initWithTitle:@"Login Error"
+                                                                                                                                     message:[error localizedDescription]
+                                                                                                                                    delegate:nil
+                                                                                                                           cancelButtonTitle:@"OK"
+                                                                                                                           otherButtonTitles:nil];
+                                                                              [avLoginError show];
                                                                           } else {
-                                                                              NSLog(@"Done!");
-                                                                              NSLog(@"Account id: %@", [SCSoundCloud account].identifier);
                                                                               self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(scLogout)                                                                                       ];
                                                                               [self.incomingTracks removeAllObjects];
                                                                               [self scGetUserDetails];
@@ -275,11 +275,15 @@
                       responseHandler:^(NSURLResponse *response, NSData *data, NSError *error){
                           // Handle the response
                           if (error) {
-                              NSLog(@"Ooops, something went wrong: %@", [error localizedDescription]);
+                              UIAlertView *avGetUserError = [[UIAlertView alloc] initWithTitle:@"Error fetching user details"
+                                                                                       message:[error localizedDescription]
+                                                                                      delegate:nil
+                                                                             cancelButtonTitle:@"OK"
+                                                                             otherButtonTitles:nil];
+                              [avGetUserError show];
                           } else {
                               // Check the statuscode and parse the data
                               NSString *strData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                              NSLog(@"String data: %@", strData);
                               NSDictionary *dictData = [strData objectFromJSONString];
                               self.lblUserName.text = [dictData objectForKey:@"username"];
                               self.lblCity.text = [dictData objectForKey:@"city"];
@@ -307,7 +311,12 @@
                       responseHandler:^(NSURLResponse *response, NSData *data, NSError *error){
                           // Handle the response
                           if (error) {
-                              NSLog(@"Ooops, something went wrong: %@", [error localizedDescription]);
+                              UIAlertView *avGetIncomingError = [[UIAlertView alloc] initWithTitle:@"Error fetching tracks"
+                                                                                           message:[error localizedDescription]
+                                                                                          delegate:nil
+                                                                                 cancelButtonTitle:@"OK"
+                                                                                 otherButtonTitles:nil];
+                              [avGetIncomingError show];
                           } else {
                               // Check the statuscode and parse the data
                               NSString *strData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
@@ -349,11 +358,15 @@
                       responseHandler:^(NSURLResponse *response, NSData *data, NSError *error){
                           // Handle the response
                           if (error) {
-                              NSLog(@"Ooops, something went wrong: %@", [error localizedDescription]);
+                              UIAlertView *avGetIncomingError = [[UIAlertView alloc] initWithTitle:@"Error fetching tracks"
+                                                                                           message:[error localizedDescription]
+                                                                                          delegate:nil
+                                                                                 cancelButtonTitle:@"OK"
+                                                                                 otherButtonTitles:nil];
+                              [avGetIncomingError show];
                           } else {
                               // Check the statuscode and parse the data
                               NSString *strData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                              NSLog(@"String data: %@", strData);
                               NSDictionary *dictData = [strData objectFromJSONString];
                               NSArray *incomingArray = [dictData objectForKey:@"collection"];
                               if ([dictData objectForKey:@"next_href"] != nil)
